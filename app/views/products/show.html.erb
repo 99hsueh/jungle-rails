@@ -29,7 +29,11 @@
       <div class="col-sm-4">
         <dl class="dl-horizontal">
           <dt>Rating:</dt>
-          <dd><%= review.rating %></dd>
+          <dd>
+            <% review.rating.times do %>
+              <i class="fa fa-star" aria-hidden="true" style="color: #f4c542 ;"></i>
+            <% end %>
+          </dd>
         </dl>
       </div>
       <div class="col-sm-8">
@@ -38,8 +42,13 @@
           <dd><%= review.description %></dd>
         </dl>
       </div>
-      <% end  %>
+      <% end %>
     </div>
+
+
+
+
+
 
   </article>
 
