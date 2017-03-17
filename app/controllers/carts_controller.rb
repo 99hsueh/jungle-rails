@@ -1,6 +1,11 @@
 class CartsController < ApplicationController
 
   def show
+    if cart == {}
+      redirect_to '/cart/empty'
+    else
+      redirect_to '/cart'
+    end
   end
 
   def add_item
