@@ -4,7 +4,7 @@ class CartsController < ApplicationController
     if cart == {}
       redirect_to '/cart/empty'
     else
-      redirect_to '/cart'
+      request.path
     end
   end
 
