@@ -24,7 +24,11 @@
       </div>
     </div>
     <div class="row">
-      <!-- loop here -->
+      <div class="col-sm-12">
+        <%= render 'form' %>
+      </div>
+    </div>
+    <div class="row">
       <% @product.reviews.each do |review| %>
       <div class="col-sm-4">
         <dl class="dl-horizontal">
