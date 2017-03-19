@@ -8,18 +8,9 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
-  # GET /reviews/1
-  # GET /reviews/1.json
-  def show
-  end
-
   # GET /reviews/new
   def new
     @review = Review.new
-  end
-
-  # GET /reviews/1/edit
-  def edit
   end
 
   # POST /reviews
@@ -59,7 +50,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to product_path(@product), notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

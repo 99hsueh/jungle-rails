@@ -5,7 +5,11 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order! Your order was processed through: <%= current_user.email  %></h4>
+    <% if current_user %>
+      <h4>Thank you for your order! Your order was processed through: <%= current_user.email  %></h4>
+    <% else %>
+      <h4>Thank you for your order!</h4>
+    <% end  %>
   </div>
   <div class="panel panel-default items">
     <table class="table table-bordered">
